@@ -13,16 +13,15 @@ void sfml_example()
 {
     sf::Window window(sf::VideoMode(800, 600), "My window");
 
-    // run the program as long as the window is open
     while (window.isOpen())
     {
-        // check all the window's events that were triggered since the last iteration of the loop
         sf::Event event;
         while (window.pollEvent(event))
         {
-            // "close requested" event: we close the window
             if (event.type == sf::Event::Closed)
+            {
                 window.close();
+            }
         }
     }
 }
@@ -89,11 +88,11 @@ int sdl2_window_example()
     SDL_Quit();
 }
 
- // ---
+// ---
 
- int glfw_window_example(void)
+int glfw_window_example(void)
 {
-    GLFWwindow* window;
+    GLFWwindow *window;
 
     /* Initialize the library */
     if (!glfwInit())
@@ -132,8 +131,8 @@ int main(int, char **)
     //sfml_example();
     sdl2_window_example();
     //glfw_window_example();
-    
+
     std::cout << "Hello, world!\n";
-    
+
     printf("%s\n", sqlite3_libversion());
 }

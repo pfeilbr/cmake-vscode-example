@@ -3,7 +3,12 @@
         {
             "name": "Mac",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "/Library/Frameworks/Mono.framework/Headers",
+                "/nix/store/slsdd3g7n1sdc76nyqimklji2wr42cwn-sfml-2.5.0/include",
+                "/nix/store/jr4xk3vnibpam36yc71ba99iqnc2jj95-SDL2-2.0.8-dev/include/SDL2",
+                "/nix/store/wjh84xw6inxca3r8l19qh6lra3j734ph-glfw-3.2.1/include",
+                "/nix/store/jfg3wilqdiii65z04nr916yip0jppxvx-apple-framework-OpenGL/Library/Frameworks/OpenGL.framework"
             ],
             "defines": [],
             "macFrameworkPath": [

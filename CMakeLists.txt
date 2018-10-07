@@ -29,7 +29,26 @@ find_package(opengl)
 include_directories(${OPENGL_INCLUDE_DIR})
 target_link_libraries(example ${OPENGL_LIBRARIES})
 
-
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
+
+function(output_include_dirs)
+    set(include_dir_str "")
+
+    get_property(dirs DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY INCLUDE_DIRECTORIES)
+    foreach(dir ${dirs})
+      set(include_dir_str "${include_dir_str}\"${dir}\",")
+    endforeach()
+    
+    # set(pth "${CMAKE_BINARY_DIR}/conan-includes.txt")
+    # file(WRITE "${pth}" "${include_dir_str}")
+    message(STATUS "${include_dir_str}")
+endfunction()
+
+output_include_dirs()
+
+# get_property(dirs DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY INCLUDE_DIRECTORIES)
+# foreach(dir ${dirs})
+#   message(STATUS "dir='${dir}'")
+# endforeach()
