@@ -21,9 +21,9 @@ find_package(SDL2)
 include_directories(${SDL2_INCLUDE_DIR})
 target_link_libraries(example ${SDL2_LIBRARY})
 
-# find_package(GLFW)
-# include_directories(${GLFW_INCLUDE_DIR})
-# target_link_libraries(example ${GLFW_LIBRARIES})
+find_package(GLFW)
+include_directories(${GLFW_INCLUDE_DIR})
+target_link_libraries(example ${GLFW_LIBRARIES})
 
 find_package(opengl)
 include_directories(${OPENGL_INCLUDE_DIR})
