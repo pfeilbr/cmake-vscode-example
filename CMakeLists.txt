@@ -43,12 +43,7 @@ function(output_include_dirs)
     
     # set(pth "${CMAKE_BINARY_DIR}/conan-includes.txt")
     # file(WRITE "${pth}" "${include_dir_str}")
-    message(STATUS "${include_dir_str}")
+    message(STATUS "INCLUDE_DIRECTORIES: ${include_dir_str}")
 endfunction()
 
 output_include_dirs()
-
-# get_property(dirs DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY INCLUDE_DIRECTORIES)
-# foreach(dir ${dirs})
-#   message(STATUS "dir='${dir}'")
-# endforeach()
