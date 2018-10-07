@@ -8,7 +8,7 @@ with import <nixpkgs> {}; {
                         sqlite
                         sfml
                         SDL2
-                        glfw
+                        # glfw
                       ];
     };
 }

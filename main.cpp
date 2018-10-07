@@ -2,7 +2,6 @@
 #include <sqlite3.h>
 #include <SFML/Window.hpp>
 
-//#include <GLFW/glfw3.h>
 #include <SDL.h>
 #include <SDL_opengl.h>
 #include <stdlib.h>
