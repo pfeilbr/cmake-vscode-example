@@ -4,6 +4,7 @@
     * uses cmake `Find*.cmake` files in [`cmake/`](cmake/)
 * uses [Nix](https://nixos.org/nixpkgs/manual/) package manager for managing development dependencies
     * see [`default.nix`](default.nix)
+* [`main.cpp`](main.cpp) contains examples/code that leverages SFML, SDL2, OpenGL, and SQLite3 to demonstrate leveraging dependencies
 
 ## Prerequisites
 
